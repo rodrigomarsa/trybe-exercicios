@@ -1,0 +1,10 @@
+rio
+sol
+rua
+cidade
+estado
+mar
+lua
+computador
+impressora
+site
