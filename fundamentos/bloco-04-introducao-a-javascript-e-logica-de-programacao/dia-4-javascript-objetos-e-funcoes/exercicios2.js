@@ -11,16 +11,16 @@
 // console.log(verificaPalindromo('desenvolvimento'))
 
 // Exercicio 2:
-// function maiorNumero(numeros) {
-//     let indiceMaior = 0;
-//     for (let index in numeros) {
-//         if (numeros[indiceMaior] < numeros[index]) {
-//             indiceMaior = index;
-//         }
-//     }
-//     return indiceMaior;
-// }
-// console.log(maiorNumero([2, 3, 6, 7, 10, 1]))
+function maiorNumero(numeros) {
+    let indiceMaior = 0;
+    for (let index in numeros) {
+        if (numeros[indiceMaior] < numeros[index]) {
+            indiceMaior = index;
+        }
+    }
+    return indiceMaior;
+}
+console.log(maiorNumero([2, 3, 6, 7, 10, 1]))
 
 // Exercicio 3:
 // function menorNumero(numeros) {
@@ -78,19 +78,19 @@
 // console.log(somatorio(5))
 
 // Exercicio 7:
-function verificaFimPalavra(palavra, fimPalavra) {
-    palavra = palavra.split('');
-    fimPalavra = fimPalavra.split('');
-    let controle = true;
+// function verificaFimPalavra(palavra, fimPalavra) {
+//     palavra = palavra.split('');
+//     fimPalavra = fimPalavra.split('');
+//     let controle = true;
 
-    for (let index = 0; index < fimPalavra.length; index += 1) {
-        if (palavra[palavra.length - fimPalavra.length + index] != fimPalavra[index]) {
-            controle = false;
-        }
-    }
+//     for (let index = 0; index < fimPalavra.length; index += 1) {
+//         if (palavra[palavra.length - fimPalavra.length + index] != fimPalavra[index]) {
+//             controle = false;
+//         }
+//     }
 
-    return controle;
-}
+//     return controle;
+// }
 
-console.log(verificaFimPalavra('trybe', 'be')); //true
-console.log(verificaFimPalavra('joaofernando', 'fernan')); //false
+// console.log(verificaFimPalavra('trybe', 'be')); //true
+// console.log(verificaFimPalavra('joaofernando', 'fernan')); //false
