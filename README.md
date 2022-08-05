@@ -42,7 +42,7 @@ Com um currículo desenhado em parceria com pessoas referência em tecnologia e 
  - [ ] **04**: HTML Semântico
  - [ ] **05**: Projeto - Lessons Learned
 
-**Bloco 04: Introdução à JavaScript e Lógica de Programação**
+### Bloco 04: Introdução à JavaScript e Lógica de Programação
 
  - [ ] **01**: Introdução - JavaScript
  - [ ] **01**: JavaScript - Primeiros passos
