@@ -1,0 +1,40 @@
+.cor-1 {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.cor-2 {
+  width: 50px;
+  height: 50px;
+  background-color: brown;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.cor-3 {
+  width: 50px;
+  height: 50px;
+  background-color: cadetblue;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.cor-4 {
+  width: 50px;
+  height: 50px;
+  background-color: darkolivegreen;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+#paleta {
+  display: flex;
+  width: 100%;
+}
+
+#mensagem {
+  height: 30px;
+}
