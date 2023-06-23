@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Exercicio 1
+        let pai1 = document.getElementsByTagName('body')[0];
+        let texto = document.createElement('h1');
+        texto.innerText = 'Exercício 5.2 - JavaScript DOM';
+        pai1.appendChild(texto);
+
+        // Exercicio 2
+        let filho1 = document.createElement('main');
+        filho1.className = 'main-content';
+        pai1.appendChild(filho1);
+
+        // Exercicio 3
+        let filho2 = document.createElement('section');
+        filho2.className = 'center-content';
+        filho1.appendChild(filho2);
+
+        // Exercicio 4
+        let filho3 = document.createElement('p');
+        filho3.innerText = 'Trybe';
+        filho2.appendChild(filho3);
+
+        // Exercicio 5
+        let filho4 = document.createElement('section');
+        filho4.className = 'left-content';
+        filho1.appendChild(filho4);
+
+        // Exercicio 6
+        let filho5 = document.createElement('section');
+        filho5.className = 'right-content';
+        filho1.appendChild(filho5);
+
+        // Exercicio 7
+        let filho6 = document.createElement('img');
+        filho6.className = 'small-image';
+        filho6.src = 'https://picsum.photos/200';
+        filho4.appendChild(filho6);
+
+        // Exercicio 8
+        let lista = document.createElement('ul');
+        filho5.appendChild(lista);
+        let numeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+            'Sete', 'Oito', 'Nove', 'Dez']
+        for (let index = 0; index < numeros.length; index += 1) {
+            let listaNaoOrdenada = document.createElement('li');
+            listaNaoOrdenada.innerHTML = numeros[index];
+            lista.appendChild(listaNaoOrdenada);
+        }
+
+        // Exercicio 9
+        for (let index = 1; index <= 3; index += 1) {
+            let tags = document.createElement('h3');
+            tags.innerHTML = 'Texto ' + index;
+            filho1.appendChild(tags);
+        }
+
+        // Exercicio 1
+        let titulo = document.querySelector('h1');
+        titulo.className = 'title';
+
+        // Exercicio 2
+        let descricao = document.getElementsByTagName('h3');
+        for (let index = 0; index < 3; index += 1) {
+            descricao[index].className = 'description';
+        }
+
+        // Exercicio 3
+        let secaoEsquerda = document.getElementsByClassName('left-content')[0];
+        filho1.removeChild(secaoEsquerda);
+
+        // Exercicio 4
+        let centraliza = document.getElementsByClassName('right-content')[0];
+        centraliza.style.marginRight = 'auto';
+
+        // Exercicio 5
+        let corDeFundo = document.getElementsByClassName('center-content')[0];
+        corDeFundo.parentNode.style.backgroundColor = 'green';
+
+        // Exercicio 6
+        let removeElementos = document.getElementsByTagName('ul')[0];
+        removeElementos.lastChild.remove();
+        removeElementos.lastChild.remove();
+
+    </script>
+</body>
+
+</html>

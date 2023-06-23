@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+            <section id="primeiroFilho"></section>
+            <section id="elementoOndeVoceEsta">
+                <section id="primeiroFilhoDoFilho"></section>
+                <section id="segundoEUltimoFilhoDoFilho"></section>
+            </section>
+            Atenção!
+            <section id="terceiroFilho"></section>
+            <section id="quartoEUltimoFilho"></section>
+        </section>
+
+    </main>
+    <script>
+        console.log(document.getElementById('elementoOndeVoceEsta'));
+        document.getElementById('elementoOndeVoceEsta').parentElement.style.color = 'green';
+        document.querySelector('#primeiroFilhoDoFilho').innerHTML = 'Primeiro Filho do Filho';
+        console.log(document.querySelector('#pai').firstChild);
+        console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
+        console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+        console.log(document.querySelector('#pai').lastElementChild.previousElementSibling);
+
+        let irmao = document.querySelector('#pai');
+        console.log(document.createElement('section'));
+
+    </script>
+</body>
+
+</html>
