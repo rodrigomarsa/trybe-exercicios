@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Editar Aluno</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <h1>Editar Aluno</h1>
+  <form action="/alunos/editar/{{ aluno.matricula }}" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="{{ aluno.nome }}" required>
+    <label for="matricula">Matrícula:</label>
+    <input type="text" id="matricula" name="matricula" value="{{ aluno.matricula }}" required>
+    <button type="submit">Salvar</button>
+  </form>
+  <a href="/alunos">Voltar para a Lista</a>
+</body>
+
+</html>

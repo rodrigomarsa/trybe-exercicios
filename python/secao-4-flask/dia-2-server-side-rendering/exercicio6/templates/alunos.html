@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Ações</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.matricula }}</td>
+            <td>
+                <a href="/alunos/editar/{{ loop.index0 }}">Editar</a>
+                <a href="/alunos/excluir/{{ loop.index0 }}">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/alunos/adicionar">Adicionar Aluno</a>
+</body>
+</html>

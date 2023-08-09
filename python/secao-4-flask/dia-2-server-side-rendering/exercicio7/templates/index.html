@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+    <h1>Catálogo de Filmes</h1>
+    <form action="/" method="POST">
+        <input type="text" name="titulo" placeholder="Digite o título do filme">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul class="filmes">
+        {% for filme in filmes %}
+        <li class="filme">
+            <a href="/filmes/{{ filme._id }}">
+                <img src="{{ filme.poster }}" alt="{{ filme.titulo }} Poster">
+                <h2>{{ filme.titulo }}</h2>
+                <p>Ano: {{ filme.ano }}</p>
+                <p>Diretor: {{ filme.diretor }}</p>
+                <p>Gênero: {{ filme.genero }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
