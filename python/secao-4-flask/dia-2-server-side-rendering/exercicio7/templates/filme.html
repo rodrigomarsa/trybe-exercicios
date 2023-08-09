@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Filme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='filme.css') }}">
+</head>
+<body>
+    {% if filme %}
+    <section class="filme">
+        <h1>{{ filme.titulo }}</h1>
+        <p>Ano: {{ filme.ano }}</p>
+        <p>Diretor: {{ filme.diretor }}</p>
+        <p>Gênero: {{ filme.genero }}</p>
+        <img src="{{ filme.poster }}" alt="{{ filme.titulo }}">
+    </section>
+    {% else %}
+    <p>Filme não encontrado.</p>
+    {% endif %}
+</body>
+</html>
