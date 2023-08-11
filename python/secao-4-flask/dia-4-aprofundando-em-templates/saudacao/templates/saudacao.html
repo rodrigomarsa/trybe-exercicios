@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+</head>
+<body>
+    {% if hora < 12 %}
+        <p>{{ manha }}</p>
+    {% elif hora < 18 %}
+        <p>{{ tarde }}</p>
+    {% else %}
+        <p>{{ noite }}</p>
+    {% endif %}
+</body>
+</html>
