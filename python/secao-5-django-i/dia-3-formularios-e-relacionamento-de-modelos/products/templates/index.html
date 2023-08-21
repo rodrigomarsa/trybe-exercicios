@@ -1,0 +1,16 @@
+<!-- products/templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    O Marketplace pra você!
+{% endblock %}
+
+{% block content %}
+    <h1>Boas vindas ao Projeto Marketplace!</h1>
+    <ul>
+        <li><a href="{% url 'product' %}">Criar Produto</a></li>
+        <li><a href="{% url 'seller' %}">Criar Vendedor</a></li>
+        <li><a href="{% url 'buyer' %}">Criar Comprador</a></li>
+        <li><a href="{% url 'order' %}">Criar Pedido</a></li>
+    </ul>
+{% endblock %}

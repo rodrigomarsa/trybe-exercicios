@@ -1,0 +1,15 @@
+<!-- products/templates/order.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Criar Pedido
+{% endblock %}
+
+{% block content %}
+    <h1>Criar Pedido</h1>
+    <form method="POST" action="{% url 'order' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}

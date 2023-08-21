@@ -1,0 +1,15 @@
+<!-- products/templates/seller.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Criar Vendedor
+{% endblock %}
+
+{% block content %}
+    <h1>Criar Vendedor</h1>
+    <form method="POST" action="{% url 'seller' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}
