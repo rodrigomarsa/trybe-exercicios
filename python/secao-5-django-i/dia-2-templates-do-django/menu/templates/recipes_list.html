@@ -1,0 +1,19 @@
+<!-- menu/templates/recipes_list.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Lista de Receitas
+{% endblock %}
+
+{% block content %}
+    <h1>Lista de Receitas</h1>
+    {% for recipe in recipes %}
+        {% if recipe.image %}
+            <img src="{% static recipe.image.url %}" alt="Imagem da receita">
+        {% endif %}
+        <h2>{{ recipe.name }}</h2>
+    {% empty %}
+        <p>No recipe found.</p>
+    {% endfor %}
+{% endblock %}
